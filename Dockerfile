@@ -27,7 +27,7 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar ./app.jar
 
 # Expose the port that matches application.properties
-EXPOSE 8081
+EXPOSE 8761
 
 # Run the application
 ENTRYPOINT ["java", "-Xmx256m", "-jar", "app.jar"]
